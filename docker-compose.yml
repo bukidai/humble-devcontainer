@@ -1,0 +1,14 @@
+version: '2'
+services:
+  ros2:
+    build:
+      context: .
+      dockerfile: ./ros2/Dockerfile
+
+    volumes:
+      - .:/home/vscode/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY
+    tty: true
+    stdin_open: true
