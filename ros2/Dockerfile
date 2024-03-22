@@ -12,7 +12,7 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 # Add user
 ARG USER_NAME=vscode
 ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+ARG USER_GID=${USER_UID}
 
 RUN groupadd -g ${USER_GID} ${USER_NAME} && \
     useradd -m -s /bin/bash -u ${USER_UID} -g ${USER_GID} ${USER_NAME} && \

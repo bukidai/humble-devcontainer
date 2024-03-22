@@ -1,18 +1,18 @@
-version: '2'
+version: '3'
 services:
   ros2:
     build:
       context: .
       dockerfile: ./ros2/Dockerfile
+      args:
+        USER_NAME: "${USER_NAME}"
+        USER_UID: "${USER_UID}"
+        USER_GID: "${USER_GID}"
 
     volumes:
       - .:/home/vscode/workspace
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
       - DISPLAY
-    args:
-      - USER_NAME=${USER_NAME}
-      - USER_UID=${USER_UID}
-      - USER_GID=${USER_GID}
     tty: true
     stdin_open: true
