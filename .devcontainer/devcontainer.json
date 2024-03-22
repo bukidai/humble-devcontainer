@@ -3,5 +3,26 @@
     "dockerComposeFile": "../docker-compose.yml",
     "service": "ros2",
     "workspaceFolder": "/home/vscode/workspace",
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.copilot",
+                "github.copilot-chat",
+                "ms-ceintl.vscode-language-pack-ja",
+                "ms-python.black-formatter",
+                "ms-python.debugpy",
+                "ms-python.flake8",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cpptools-themes",
+                "twxs.cmake",
+                "visualstudioexptteam.intellicode-api-usage-examples",
+                "visualstudioexptteam.vscodeintellicode"
+            ]
+        }
+    }
 }
